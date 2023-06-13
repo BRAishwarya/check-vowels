@@ -1,0 +1,114 @@
+﻿<process name="choice-vowels" version="1.0" bpversion="7.1.2.3518" narrative="" byrefcollection="true" preferredid="ae2b4741-74d8-402a-9e6c-474bbdcee83b">
+  <view>
+    <camerax>0</camerax>
+    <cameray>-22</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="c85a2c18-0f47-471e-a852-6b5c359779c3" name="Start" type="Start">
+    <display x="-75" y="-195" />
+    <onsuccess>5b4534cc-568a-4420-92ec-03cfbf0acf83</onsuccess>
+  </stage>
+  <stage stageid="527c5d01-f6fe-4ba5-adfb-0e6a4964dc17" name="Stage1" type="ProcessInfo">
+    <display x="-375" y="-210" w="150" h="90" />
+  </stage>
+  <stage stageid="2ac836a2-cc36-4b35-accd-370cdce7bd70" name="Alphabet" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-255" y="-45" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">z</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5b4534cc-568a-4420-92ec-03cfbf0acf83" name="vowel" type="ChoiceStart">
+    <display x="-75" y="-120" />
+    <groupid>23244014-b960-4294-8cab-3adc9153c5d5</groupid>
+    <choices>
+      <choice expression="[Alphabet]=&quot;a&quot;">
+        <name>a</name>
+        <distance>45</distance>
+        <ontrue>bdba88dd-e234-4e0f-b4ad-6e87579a3c87</ontrue>
+      </choice>
+      <choice expression="[Alphabet]=&quot;e&quot;">
+        <name>e</name>
+        <distance>90</distance>
+        <ontrue>5cb3107d-4332-427f-815f-5442ec66f8bf</ontrue>
+      </choice>
+      <choice expression="[Alphabet]=&quot;i&quot;">
+        <name>i</name>
+        <distance>135</distance>
+        <ontrue>8eeea10a-cce4-456f-9040-629016fabd14</ontrue>
+      </choice>
+      <choice expression="[Alphabet]=&quot;o&quot;">
+        <name>o</name>
+        <distance>180</distance>
+        <ontrue>109e887e-1c10-44f1-bbbb-fbea3619543d</ontrue>
+      </choice>
+      <choice expression="[Alphabet]=&quot;u&quot;">
+        <name>u</name>
+        <distance>225</distance>
+        <ontrue>aa73d382-e1b2-4c70-bc10-00f40aae521f</ontrue>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="37a6ca50-d896-45cd-93b4-c65f04cbc466" name="consonant" type="ChoiceEnd">
+    <display x="-75" y="150" />
+    <onsuccess>bd8cb137-44ef-4fe2-a0c6-5d7337ff5d3f</onsuccess>
+    <groupid>23244014-b960-4294-8cab-3adc9153c5d5</groupid>
+  </stage>
+  <stage stageid="44eb8dcc-1fde-4c58-bbbe-2837f1868fa0" name="End" type="End">
+    <display x="270" y="15" />
+  </stage>
+  <stage stageid="bdba88dd-e234-4e0f-b4ad-6e87579a3c87" name="a" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="45" y="-75" />
+    <onsuccess>44eb8dcc-1fde-4c58-bbbe-2837f1868fa0</onsuccess>
+    <calculation expression="[Alphabet] &amp; &quot;is vowel&quot;" stage="result1" />
+  </stage>
+  <stage stageid="5cb3107d-4332-427f-815f-5442ec66f8bf" name="e" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="45" y="-30" />
+    <onsuccess>44eb8dcc-1fde-4c58-bbbe-2837f1868fa0</onsuccess>
+    <calculation expression="[Alphabet]  &amp; &quot;is vowel&quot;" stage="result1" />
+  </stage>
+  <stage stageid="8eeea10a-cce4-456f-9040-629016fabd14" name="i" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="45" y="15" />
+    <onsuccess>44eb8dcc-1fde-4c58-bbbe-2837f1868fa0</onsuccess>
+    <calculation expression="[Alphabet]  &amp; &quot;is vowel&quot;" stage="result1" />
+  </stage>
+  <stage stageid="109e887e-1c10-44f1-bbbb-fbea3619543d" name="o" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="45" y="60" />
+    <onsuccess>44eb8dcc-1fde-4c58-bbbe-2837f1868fa0</onsuccess>
+    <calculation expression="[Alphabet]  &amp; &quot;is vowel&quot;" stage="result1" />
+  </stage>
+  <stage stageid="aa73d382-e1b2-4c70-bc10-00f40aae521f" name="u" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="45" y="105" />
+    <onsuccess>44eb8dcc-1fde-4c58-bbbe-2837f1868fa0</onsuccess>
+    <calculation expression="[Alphabet]  &amp; &quot;is vowel&quot;" stage="result1" />
+  </stage>
+  <stage stageid="bd8cb137-44ef-4fe2-a0c6-5d7337ff5d3f" name="cal" type="Calculation">
+    <loginhibit onsuccess="true" />
+    <display x="45" y="150" />
+    <onsuccess>44eb8dcc-1fde-4c58-bbbe-2837f1868fa0</onsuccess>
+    <calculation expression="[Alphabet]  &amp; &quot;is Consonant&quot;" stage="result1" />
+  </stage>
+  <stage stageid="538b2ce1-41ce-4d71-a59b-5e6598a259bf" name="result1" type="Data">
+    <display x="-270" y="75" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="514b7d37-1839-4de7-97d8-4f1ae4d2b058" name="result" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-255" y="15" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+</process>
